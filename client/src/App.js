@@ -1,12 +1,12 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
-import logo from "./logo.svg";
+import logo from './logo.svg';
 
-import "./App.css";
+import './App.css';
 
 class App extends Component {
   state = {
-    response: ""
+    response: ''
   };
 
   componentDidMount() {
@@ -16,18 +16,21 @@ class App extends Component {
   }
 
   callApi = async () => {
-    const response = await fetch("/suggestions", {
-      method: "POST",
-      body: JSON.stringify({ numbers: 12345 }),
+    const requestBody = {
+      onlyRealWords: true,
+      numbers: 12345
+    };
+
+    const response = await fetch('/suggestions', {
+      method: 'POST',
+      body: JSON.stringify(requestBody),
       headers: {
-        "Accept": "application/json",
-        "Content-Type": "application/json"
+        'Content-Type': 'application/json'
       }
     });
     const body = await response.json();
 
     if (response.status !== 200) throw Error(body.message);
-
     return body;
   };
 
