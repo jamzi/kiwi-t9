@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 
@@ -23,6 +24,11 @@ const Display = props => {
       {numberString}
     </Paper>
   );
+};
+
+Display.propTypes = {
+  classes: PropTypes.object.isRequired,
+  numberString: PropTypes.string.isRequired
 };
 
 export default withStyles(styles)(Display);

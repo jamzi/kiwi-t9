@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Chip from '@material-ui/core/Chip';
@@ -29,6 +30,11 @@ const Suggestions = props => {
       })}
     </Paper>
   );
+};
+
+Suggestions.propTypes = {
+  classes: PropTypes.object.isRequired,
+  words: PropTypes.array.isRequired
 };
 
 export default withStyles(styles)(Suggestions);

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
@@ -149,6 +150,13 @@ const Keypad = props => {
       </div>
     </Paper>
   );
+};
+
+Keypad.propTypes = {
+  classes: PropTypes.object.isRequired,
+  onlyRealWords: PropTypes.bool.isRequired,
+  handleKeyPress: PropTypes.func.isRequired,
+  handleShowOnlyRealWords: PropTypes.func.isRequired
 };
 
 export default withStyles(styles)(Keypad);
