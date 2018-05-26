@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="MuiPaper-root-2 MuiPaper-elevation4-8 MuiPaper-rounded-3 Display-paper-1"
+>
+  test
+</div>
+`;

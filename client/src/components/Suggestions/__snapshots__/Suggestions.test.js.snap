@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="MuiPaper-root-3 MuiPaper-elevation4-9 MuiPaper-rounded-4 Suggestions-paper-1"
+>
+  <div
+    className="MuiChip-root-30 Suggestions-chip-2"
+    onClick={undefined}
+    onKeyDown={[Function]}
+    role="button"
+    tabIndex={-1}
+  >
+    <span
+      className="MuiChip-label-35"
+    >
+      tree
+    </span>
+  </div>
+  <div
+    className="MuiChip-root-30 Suggestions-chip-2"
+    onClick={undefined}
+    onKeyDown={[Function]}
+    role="button"
+    tabIndex={-1}
+  >
+    <span
+      className="MuiChip-label-35"
+    >
+      trie
+    </span>
+  </div>
+  <div
+    className="MuiChip-root-30 Suggestions-chip-2"
+    onClick={undefined}
+    onKeyDown={[Function]}
+    role="button"
+    tabIndex={-1}
+  >
+    <span
+      className="MuiChip-label-35"
+    >
+      troo
+    </span>
+  </div>
+</div>
+`;
