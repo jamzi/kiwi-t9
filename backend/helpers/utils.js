@@ -1,3 +1,6 @@
+const wordlist = require('wordlist-english')
+const englishWords = wordlist['english'];
+
 const keyMap = {
 	2: ['a', 'b', 'c'],
 	3: ['d', 'e', 'f'],
@@ -14,7 +17,20 @@ const generateWords = (numbers, includeOnlyRealWords) => {
         .split('')
         .map(key => keyMap[key]);
 
-    return generateWordsCombinations(numberString);
+    let words = [];
+    let allPossibleWords = generateWordsCombinations(numberString);
+
+    if (includeOnlyRealWords) {
+        allPossibleWords.map((word, index) => {
+            if (englishWords.indexOf(word) > -1) {
+                words.push(word);
+            }
+        });
+    } else {
+        words = allPossibleWords;
+    }
+
+    return words;
 }
 
 const generateWordsCombinations = (keys) => {
@@ -29,7 +45,7 @@ const generateWordsCombinations = (keys) => {
 	{
 		for (let j = 0; j <= secondKey.length - 1; j++) 
 		{
-			result.push( firstKey[i] + secondKey[j]);
+			result.push(firstKey[i] + secondKey[j]);
 		}
     }
 
