@@ -5,7 +5,8 @@
     "client": "cd client && npm run start",
     "server": "nodemon backend/server.js",
     "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
-    "test": "mocha \"backend/test/*.js\""
+    "test": "mocha \"backend/test/*.js\"",
+    "postinstall": "cd client && npm install"
   },
   "dependencies": {
     "body-parser": "^1.18.3",

@@ -12,9 +12,6 @@
 * `git clone https://github.com/jamzi/kiwi-t9.git`
 * `cd kiwi-t9`
 * `npm install`
-* `cd client`
-* `npm install`
-* `cd ..`
 * `npm run dev`
 
 ## Features
